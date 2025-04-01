@@ -79,6 +79,7 @@ function captureNextPhoto() {
                 // display frame selection and download button after
                 document.getElementById('frame-selection').style.display = '';
                 document.getElementById('download-strip').style.display = '';
+                document.getElementById('about-page').style.display = '';
             }
         }
     }, 1000);  // updating countdown seconds
