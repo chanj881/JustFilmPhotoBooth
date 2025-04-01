@@ -209,3 +209,10 @@ button:hover {
     margin-top: 5px; 
     color: #539eff; 
 }
+
+
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 370px;
+    }
+}

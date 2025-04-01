@@ -115,8 +115,12 @@ function resetApp() {
 }
 
 // function to download picture with custom frame designs
-// Function to download the photo strip with custom frame designs
 function downloadPhotoStrip() {
+     // Play the download sound effect
+     const downloadSound = document.getElementById('download-sound');
+     downloadSound.play();  // play the sound when the download starts
+
+
     const canvasStrip = document.createElement('canvas');
     const ctx = canvasStrip.getContext('2d');
     
@@ -201,6 +205,10 @@ function triggerShutterEffect() {
 
     // adding shutter animation
     flash.style.animation = 'shutter 0.2s ease-out'; 
+
+    // shutter sound
+    const shutterSound = document.getElementById('shutter-sound');
+    shutterSound.play(); 
 
     // reset after animation
     setTimeout(() => {
