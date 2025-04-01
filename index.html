@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JustFilm Photo Booth</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/oqj6tkp.css">
+</head>
+<body class="gradient-background">
+    <div class="container">
+        <img src="images/logo.svg">
+
+        <h1>Look at the camera!</h1>
+
+        <video id="video" width="320" height="240" autoplay></video>
+        
+        <canvas id="canvas" width="320" height="240"></canvas>
+        
+        <div id="countdown" class="countdown">3</div>
+        
+        <div class="buttons">
+            <button id="capture">Start</button>
+            <button id="reset">Reset</button>
+        </div>
+
+    <!-- frame selection options -->
+    <div id="frame-selection" style="display: none;">
+        <div class="frame-option" data-frame="frame1">
+            <img src="images/frame1.png" alt="Frame 1" class="frame-thumbnail">
+            <p class="frame-title">Basic Star</p>
+        </div>
+        <div class="frame-option" data-frame="frame2">
+            <img src="images/frame2.png" alt="Frame 2" class="frame-thumbnail">
+            <p class="frame-title">Gingham</p>
+        </div>
+        <div class="frame-option" data-frame="frame3">
+            <img src="images/frame3.png" alt="Frame 3" class="frame-thumbnail">
+            <p class="frame-title">Heart Aura</p>
+        </div>
+        <div class="frame-option" data-frame="frame4">
+            <img src="images/frame4.png" alt="Frame 4" class="frame-thumbnail">
+            <p class="frame-title">Butterfly</p>
+        </div>
+        <div class="frame-option" data-frame="frame5">
+            <img src="images/frame5.png" alt="Frame 5" class="frame-thumbnail">
+            <p class="frame-title">Cute Doodles</p>
+        </div>
+        <div class="frame-option" data-frame="frame6">
+            <img src="images/frame6.png" alt="Frame 6" class="frame-thumbnail">
+            <p class="frame-title">Ribbons & Bows</p>
+        </div>
+        <div class="frame-option" data-frame="frame7">
+            <img src="images/frame7.png" alt="Frame 7" class="frame-thumbnail">
+            <p class="frame-title">Meow Cats</p>
+        </div>
+        <div class="frame-option" data-frame="frame8">
+            <img src="images/frame8.png" alt="Frame 8" class="frame-thumbnail">
+            <p class="frame-title">Music is My Life</p>
+        </div>
+    </div>
+    
+
+<div>
+<button id="download-strip" style="display: none;">Print Your Photo!</button>
+</div>
+
+<div id="flash"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
