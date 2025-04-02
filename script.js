@@ -188,6 +188,10 @@ resetButton.addEventListener('click', () => {
     window.location.reload();
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+    // Your code to trigger the shutter effect
+});
+
 
 downloadStripButton.addEventListener('click', () => {
     downloadPhotoStrip();  // download the photo strip as PNG
@@ -199,24 +203,34 @@ startVideo();
 // accessing the flash element
 const flash = document.getElementById('flash');
 
-// function to trigger flash/shutter
 function triggerShutterEffect() {
+    console.log("Triggering shutter effect");
+
     // showing flash
     flash.style.opacity = 1;
+    console.log("Flash opacity set to 1");
 
     // adding shutter animation
     flash.style.animation = 'shutter 0.2s ease-out'; 
+    console.log("Shutter animation triggered");
 
     // shutter sound
     const shutterSound = document.getElementById('shutter-sound');
-    shutterSound.play(); 
+    if (shutterSound) {
+        shutterSound.play(); 
+        console.log("Shutter sound played");
+    } else {
+        console.log("Shutter sound element not found");
+    }
 
     // reset after animation
     setTimeout(() => {
         flash.style.opacity = 0;
         flash.style.animation = ''; // reset the animation
+        console.log("Flash reset after animation");
     }, 200); // the duration of the animation (200ms)
 }
+
 
 // function to capture a single photo then store in memory
 function capturePhoto() {
